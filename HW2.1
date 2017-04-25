@@ -1,0 +1,17 @@
+"""
+Part 1:
+Fill in the code for `backwards`. If you've implemented it correctly,
+the `assert` statements down below it should not throw an error.
+"""
+
+def backwards():
+    """
+    This function takes in an iterable (string, list, etc.)
+    and returns its contents in reverse order
+    """
+    string = ()
+    for x in range(len(string) - 1, 0 - 1, -1):
+        return x
+
+assert backwards('cat') == 'tac'
+assert backwards([1, 2, 3]) == [3, 2, 1]
