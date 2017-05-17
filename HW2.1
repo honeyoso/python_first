@@ -4,14 +4,12 @@ Fill in the code for `backwards`. If you've implemented it correctly,
 the `assert` statements down below it should not throw an error.
 """
 
-def backwards():
+def backwards(iterable):
     """
     This function takes in an iterable (string, list, etc.)
     and returns its contents in reverse order
     """
-    string = ()
-    for x in range(len(string) - 1, 0 - 1, -1):
-        return x
+    return iterable[::-1]
 
 assert backwards('cat') == 'tac'
 assert backwards([1, 2, 3]) == [3, 2, 1]
