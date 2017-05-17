@@ -1,0 +1,28 @@
+
+"""
+Part 2:
+Create a function called `is_even` that takes in a number and returns True
+if that number is even, otherwise return False.
+Hint: this is often done using something called the "modulo operator." it is
+a mathematical operator like the plus sign or minus sign, represented by the % sign.
+here's an example of it in action:
+    10 % 3  # this returns 1
+    5 % 3   # this returns 2
+Modulo is a fancy way of saying "take the remainder". So 10 % 3 = 1 could be
+read as "the remainder of 10 divided by 3 is 1." Similarly, 5 % 3 is "the
+remainder of 5 divided by 3" and that returns 2.
+Think of how you could use this operator to check if a number is even or odd
+and use it to implement is_even
+"""
+
+def is_even(x):
+    """Your implementation goes here (x % 2 != 0)"""
+
+    if (x % 2) != 0:
+        return False
+    else:
+        return True
+
+
+assert is_even(5) == False
+assert is_even(4) == True
