@@ -1,0 +1,32 @@
+"""
+Part 3:
+You're given an empty list called `even_numbers`.
+Loop through all numbers from 0 to 100 (inclusive).
+If a number is even, append it to `even_numbers`.
+By the end of your loop, `even_numbers` should contain all evens between 0 and 100 inclusive.
+Finally, see if you can produce that same list of evens, but in only one line of code.
+"""
+
+even_numbers = []
+
+# Your loop goes here
+#even_numbers.append()
+
+for i in range (0,102,2):
+    even_numbers.append(i)
+
+print(len(even_numbers))
+print(even_numbers)
+
+assert len(even_numbers) == 51  # there should be 51 even numbers counting both 0 and 100
+assert 2 in even_numbers        # 2 should be in there
+assert 100 in even_numbers      # as should 100
+assert 99 not in even_numbers   # but not 99
+
+
+# now, try to generate that same list of evens in one line of code for `even_numbers2`
+
+even_numbers2 = (even_numbers)
+even_numbers2 == list(range(0,102,2)) # replace 0's with the proper values to get the same values as `even_numbers`
+print(even_numbers2)
+assert even_numbers == even_numbers2
