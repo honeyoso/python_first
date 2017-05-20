@@ -26,7 +26,6 @@ assert 99 not in even_numbers   # but not 99
 
 # now, try to generate that same list of evens in one line of code for `even_numbers2`
 
-even_numbers2 = (even_numbers)
-even_numbers2 == list(range(0,102,2)) # replace 0's with the proper values to get the same values as `even_numbers`
+even_numbers2 = list(range(0,102,2)) # replace 0's with the proper values to get the same values as `even_numbers`
 print(even_numbers2)
 assert even_numbers == even_numbers2
