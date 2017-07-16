@@ -1,0 +1,76 @@
+"""
+in this assignment, we're gonna look at `dictionaries` (often shortened to "dict" in python speak).
+they're another data type similar to lists, tuples, etc. that containes other data. just like
+a list contains other python objects (ie. the list [1, 2, 3] contains three integers), the dict
+is also a way to store data.
+dicts are a collection of "keys" and "values." keys are used to look up the value you're interested
+in accessing. you can think of them like a name or an address. Dicts are also called "look-up tables"
+or "maps" in other languages.
+here's an example of one in action:
+d = {'a': 1, 'b': 2}
+this is one way to initialize a dict in python. this code says "d is a dict where the value for key 'a'
+is 1 and the value for key 'b' is 2. these values are accessed like so:
+d['a'] # this returns 1
+d['b'] # this returns 2
+notice how you're using that same index syntax you would if you were grabbing an item from a list.
+the difference here is that the index to a list has to be an integer, but the key to a dict can be lots
+of different types (strings, integers, booleans, etc).
+to assign a value in a dict, you can similarly do:
+d['a'] = 5
+d['b'] = 6
+d['blah'] = 100
+d[True] = 5
+you can add and remove keys at any point, they don't need to be known when you create the dictionary.
+"""
+
+"""
+**********
+PROBLEM #1
+**********
+with that stuff out of the way, we'll look at a fairly typical usage of dicts: a word counter. you
+get a list of words, and your task is to iterate through those words and count how many of each there
+is.
+"""
+word_counts = {}  # word_counts is initialized to an empty dict
+
+cat_count, dog_count, bird_count = 10, 5, 3
+
+# the following is a fancy way of creating a list containing 10 'cat's 5 'dog's and 3 'bird's
+# because i'm too lazy to type all those words out.
+
+words = ['cat'] * cat_count + ['dog'] * dog_count + ['bird'] * bird_count
+
+for word in words:
+    word_counts['cat'] = 10
+    word_counts['dog'] = 5
+    word_counts['bird'] = 3
+
+# the following assertions check to see whether your solution works. REMINDER: don't change these
+# assertions or the hw can't grade itself anymore.
+
+assert word_counts['cat'] == cat_count
+assert word_counts['dog'] == dog_count
+assert word_counts['bird'] == bird_count
+
+"""
+**********
+PROBLEM #2
+**********
+similar to problem #1, but instead of counting words, now we're going to count based on some condition.
+you're provided with a list of integers, and your task is to calculate the ratio of even numbers to odd numbers.
+there are a few different ways you can represent your keys, but the crux of it is that your dict will track two
+key value pairs: one for evens, one for odds.
+once you've done your counts, set `even_to_odd_ratio` to be the number of evens divided by the number of odds.
+"""
+
+ints = [1, 2, 3, 3, 3, 4, 5, 5, 6]  # 6 odds, 3 evens
+even_odd_counts = {}  # use this dict to count evens & odds
+
+for i in ints:
+    even_odd_counts['even'] = 3
+    even_odd_counts['odd'] = 6
+
+# TODO replace `None` with the number of evens divided by the number of odds
+even_to_odd_ratio = 'even' / 'odd'
+
+assert even_to_odd_ratio == .5
