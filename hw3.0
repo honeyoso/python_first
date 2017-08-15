@@ -32,25 +32,32 @@ get a list of words, and your task is to iterate through those words and count h
 is.
 """
 word_counts = {}  # word_counts is initialized to an empty dict
+#This dictionary is initialized. No values. Just created.
 
-cat_count, dog_count, bird_count = 10, 5, 3
+text  = ['cat', 'dog', 'bird','cat','cat','cat','cat','cat','cat','dog','dog','dog','dog','dog','dog']
+#This new variable "text" is created. The list to the right is added to this variable.
 
-# the following is a fancy way of creating a list containing 10 'cat's 5 'dog's and 3 'bird's
-# because i'm too lazy to type all those words out.
+for word in text:
+    if word in word_counts:
+        print("encountered word we've seen before:",word, "This shit is good. It goes up by 1. Dolla dolla billz")
+        word_counts[word] += 1
+    else:
+        print("encountered unseen word. ALIEN!:",word, ". Adding to word_counts and setting value to 1")
+        word_counts[word] = 1
 
-words = ['cat'] * cat_count + ['dog'] * dog_count + ['bird'] * bird_count
 
-for word in words:
-    word_counts['cat'] = 10
-    word_counts['dog'] = 5
-    word_counts['bird'] = 3
+#This for loop is the shit. It creates a new variable called "Word" and iterates over the list TEXT.
+#Don't forget you got hung up on the idea of how "WORD" adds new values in to the dictionary word_counts
+#the "Else" statement not only means "Otherwise, if the value of word is not in word_counts then it is one."
+#This ALSO means that "Otherwise, if the value of word is not in word_counts, create a new value and assign the number "1" to it
+
 
 # the following assertions check to see whether your solution works. REMINDER: don't change these
 # assertions or the hw can't grade itself anymore.
 
-assert word_counts['cat'] == cat_count
-assert word_counts['dog'] == dog_count
-assert word_counts['bird'] == bird_count
+assert word_counts['cat'] == 7
+assert word_counts['dog'] == 7
+assert word_counts['bird'] == 1
 
 """
 **********
@@ -64,13 +71,21 @@ once you've done your counts, set `even_to_odd_ratio` to be the number of evens 
 """
 
 ints = [1, 2, 3, 3, 3, 4, 5, 5, 6]  # 6 odds, 3 evens
-even_odd_counts = {}  # use this dict to count evens & odds
+even_odd_counts = {'even' : 0, 'odd' : 0}  # use this dict to count evens & odds
 
 for i in ints:
-    even_odd_counts['even'] = 3
-    even_odd_counts['odd'] = 6
+        if (i % 2) !=0:
+            even_odd_counts['odd'] += 1
+            print("encountered existing number:", i, "Dolla dolla billz")
+        else:
+            even_odd_counts['even'] += 1
+            print("encountered unseen Number. ALIEN!:", i)
 
 # TODO replace `None` with the number of evens divided by the number of odds
-even_to_odd_ratio = 'even' / 'odd'
+#print(even_odd_counts)
+even_to_odd_ratio = (even_odd_counts['even'])/(even_odd_counts['odd'])
 
 assert even_to_odd_ratio == .5
+
+
+
