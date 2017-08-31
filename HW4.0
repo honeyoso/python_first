@@ -19,16 +19,18 @@ for i in parse_lines:
 max_throw = None
 max_count = 0
 
-for i in throw_counts:
-    print(i)
-    #loop through values and find what has the highest number of counts, that is max_count
-    #whatever key has highest number of counts that is max_throw
+for throw in throw_counts:
+    if throw_counts[throw] > max_count:
+        max_throw = throw
+#       max_count = 
+
+
+#loop through values and find what has the highest number of counts, that is max_count
+#whatever key has highest number of counts that is max_throw
 
 #set max throw as the throw with the most frequest throw, then max count is the number associated.
-    print(max_throw)
     print(max_count)
-    print(throw_counts)
-    print(parse_lines)
+    print(max_throw)
 
     assert max_throw == 'ippon seoi nage'
     assert max_count == 4
