@@ -22,15 +22,16 @@ max_count = 0
 for throw in throw_counts:
     if throw_counts[throw] > max_count:
         max_throw = throw
-#       max_count = 
+        max_count = throw_counts[throw]
 
 
 #loop through values and find what has the highest number of counts, that is max_count
 #whatever key has highest number of counts that is max_throw
 
 #set max throw as the throw with the most frequest throw, then max count is the number associated.
-    print(max_count)
-    print(max_throw)
+#    print(max_count)
+#    print(max_throw)
+#    print(throw_counts)
 
     assert max_throw == 'ippon seoi nage'
     assert max_count == 4
