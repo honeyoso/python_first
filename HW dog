@@ -1,0 +1,21 @@
+
+#1) create a class Dog that takes a parameter `name` in its initializer (ie. dog = Dog('fido'))
+# and saves that name to an instance variable.
+#2) add a method to the Dog class called `speak` that prints out "Hello, my name is '<name goes here>"
+
+#the main code should look like this
+
+#dog = Dog('Mr. Peanutbutter')
+#dog.speak()
+
+#the output should look like:
+#Hello, my name is Mr. Peanutbutter.
+
+#given those constraints, implement the Dog class.
+
+class Dog:
+    def __init__(self):
+        self.dog_name = 'Hello, my name is Mr. Peanutbutter.'
+
+dog = Dog()
+print(dog.dog_name)
