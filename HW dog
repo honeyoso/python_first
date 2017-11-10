@@ -15,7 +15,10 @@
 
 class Dog:
     def __init__(self):
-        self.dog_name = 'Hello, my name is Mr. Peanutbutter.'
+        self.dog_name = 'my name is Mr. Peanutbutter.'
+        self.dog_speak = 'Hello, '
 
 dog = Dog()
+print(dog.dog_speak)
 print(dog.dog_name)
+
