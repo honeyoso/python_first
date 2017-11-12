@@ -14,11 +14,16 @@
 #given those constraints, implement the Dog class.
 
 class Dog:
-    def __init__(self):
-        self.dog_name = 'my name is Mr. Peanutbutter.'
-        self.dog_speak = 'Hello, '
+    def __init__(self,name):
+        self.dog_name = name
 
-dog = Dog()
-print(dog.dog_speak)
-print(dog.dog_name)
+    def speak(self):
+        print("Hello, my name is "+ self.dog_name)
 
+
+names = ['Fido', 'Mr. Peanutbutter', 'Sir Fluffums']
+dogs = []
+for name in names:
+    dogs.append(Dog(name))
+for dog in dogs:
+    dog.speak()
